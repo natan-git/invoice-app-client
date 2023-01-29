@@ -1,0 +1,66 @@
+.app-header {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  padding: 0rem 0rem;
+}
+.app-header#light {
+  color: var(--black-text);
+}
+.app-header#dark {
+  color: white;
+}
+
+.app-header-title__title {
+  font-family: "spartan-700";
+  color: inherit;
+  font-size: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .app-header-title__title {
+    font-size: 1.5rem;
+  }
+}
+
+.app-header-title__total {
+  font-family: "spartan-100";
+  color: var(--blue-text);
+  font-size: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .app-header-title__total {
+    font-size: 0.75rem;
+  }
+}
+.app-header-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.app-header-cta__dropdown {
+  font-size: 1rem;
+  color: inherit;
+  font-family: "spartan-400";
+}
+
+.app-header-cta__btn {
+  font-family: "spartan-400";
+  background-color: var(--btn-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+.app-header-cta__btn img {
+  margin-right: 0.5rem;
+  color: white;
+}

@@ -1,13 +1,183 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ============COLORS=============== */
+:root {
+  /* light */
+  --black-text: hsl(228, 29%, 7%);
+  --white-text: hsl(0, 0%, 100%);
+  --gray-text: hsl(0, 0%, 57%);
+  --blue-text: hsl(231, 20%, 61%);
+  --default-background: hsl(240, 27%, 98%);
+  /* dark */
+  --dark-500: hsl(233, 30%, 21%);
+  --dark-700: hsl(233, 31%, 17%);
+  --dark-background-900: hsl(233, 30%, 11%);
+  /* buttons */
+  --btn-primary: hsl(252, 94%, 67%);
+  --btn-secondary: hsl(240, 27%, 98%);
+  --btn-danger: hsl(0, 80%, 63%);
+}
+/* ============FONTS=============== */
+@font-face {
+  font-family: "spartan-100";
+  src: url("./fonts/LeagueSpartan-Light.ttf");
+}
+@font-face {
+  font-family: "spartan-400";
+  src: url("./fonts/LeagueSpartan-Regular.ttf");
+}
+@font-face {
+  font-family: "spartan-700";
+  src: url("./fonts/LeagueSpartan-Bold.ttf");
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html {
+  font-family: "spartan-100";
+  font-size: 18px;
+  height: 100vh;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.4;
+}
+
+.app#light {
+  background: var(--default-background);
+  color: var(--black-text);
+}
+.app#dark {
+  background: var(--dark-background-900);
+  color: white;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* HELPERS */
+main {
+  margin-left: 5rem;
+  min-height: 100vh;
+  /* padding-bottom: 4rem; */
+}
+a {
+  text-decoration: none;
+}
+/* dark theme staff */
+.light {
+  background: var(--default-background);
+  color: var(--black-text);
+}
+.dark {
+  background: var(--dark-background-900);
+  color: white;
+}
+.accent-text {
+  color: var(--blue-text);
+}
+/* layout staff */
+.wrapper {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 5rem 0rem 0rem 0rem;
+  color: initial;
+  background: inherit;
+}
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-col {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.center-right {
+  text-align: center;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+/* status color state */
+.status {
+  font-family: "spartan-400";
+  padding: 0.6rem 1.2rem 0.6rem 1.2rem;
+  border-radius: 5px;
+  /* margin-left: 1rem; */
+}
+
+.pending {
+  background: #ffe8cd34;
+  color: #ff8f00;
+}
+.paid {
+  background: rgba(203, 255, 239, 0.261);
+  color: rgb(37, 205, 149);
+}
+.draft {
+  background: #ebebeb38;
+  color: #2d2d2d;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin: 0rem;
+    padding: 4rem 0rem 0rem 0rem;
+  }
+  .wrapper {
+    padding: 2rem 1rem;
+  }
+  .status {
+    margin: 0;
+  }
+  /* user invoices CMP */
 }

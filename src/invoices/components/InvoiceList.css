@@ -1,0 +1,20 @@
+.invoice-list {
+  list-style: none;
+  padding: 0rem 0rem 5rem 0rem;
+  background: inherit;
+}
+.empty-list {
+  color: inherit;
+  font-size: 0.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.empty-list h2 {
+  font-family: "spartan-400";
+  font-size: 1rem;
+  margin-top: 1rem;
+}

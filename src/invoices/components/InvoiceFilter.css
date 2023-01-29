@@ -1,0 +1,86 @@
+.dropdown {
+  position: relative;
+}
+.dropdown button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: "spartan-400";
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.dropdown button img {
+  width: 15px;
+  padding-left: 5px;
+  transition: 0.3s;
+}
+.open {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg) translateX(-5px);
+}
+.close {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 150px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  z-index: 100;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
+.menu#light {
+  background: var(--default-background);
+  color: var(--black-text);
+}
+.menu#dark {
+  background: var(--dark-500);
+  color: white;
+  box-shadow: none;
+}
+.filter-item {
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.75rem;
+  font-family: "spartan-700";
+  margin-bottom: 0.1rem;
+}
+
+.filter-item input {
+  cursor: pointer;
+}
+.short-term {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .long-term {
+    display: none;
+  }
+  .short-term {
+    display: block;
+  }
+}
+
+.light-text {
+  color: var(--black-text);
+}
+.dark-text {
+  color: white;
+}

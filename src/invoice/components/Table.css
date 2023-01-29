@@ -1,0 +1,8 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 1rem;
+}
+table thead tr th {
+  text-align: left;
+}

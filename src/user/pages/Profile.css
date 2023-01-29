@@ -1,0 +1,114 @@
+.profile-wrapper {
+  font-family: "spartan-400";
+  height: 100%;
+  width: 100%;
+  max-width: 40rem;
+  padding: 4rem 1rem 1rem 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .profile-wrapper {
+    padding: 0rem 1rem 1rem 1rem;
+  }
+}
+.profile-header {
+  border-radius: 0.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.profile-header h2 {
+  font-size: 2rem;
+  font-family: "spartan-700";
+}
+.profile-header__blob {
+  display: flex;
+  align-items: center;
+}
+.blob {
+  background: rgb(56, 221, 47);
+  border-radius: 50%;
+  margin: 10px;
+  height: 10px;
+  width: 10px;
+  box-shadow: 0 0 0 0 rgba(56, 221, 47, 1);
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(56, 221, 47, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(56, 221, 47, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(56, 221, 47, 0);
+  }
+}
+
+.profile-info {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-info#light {
+  background: white;
+}
+.profile-info#dark {
+  background: var(--dark-500);
+  color: white;
+}
+.profile-info#dark .box-info h1 {
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .profile-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.profile-info > div {
+  display: flex;
+  align-items: center;
+}
+.info-box {
+  padding-left: 1rem;
+}
+.info-box h1 {
+  font-family: "spartan-700";
+  color: inherit;
+}
+.info-box h2 {
+  font-family: "spartan-100";
+  color: rgb(198, 198, 198);
+}
+
+.user-invoices {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-invoices p {
+  margin-top: 0.5rem;
+}
+.user-invoices button {
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,42 @@
+.modal {
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 8px;
+}
+
+.modal__header {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  padding: 1.5rem;
+  background: var(--default-background);
+  color: var(--black-text);
+}
+
+.modal__header h2 {
+  font-family: "spartan-400";
+}
+
+.modal__content {
+  padding: 0.5rem 1.5rem;
+}
+
+.modal__footer {
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+  }
+}

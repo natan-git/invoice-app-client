@@ -1,0 +1,65 @@
+.invoice-form-wrapper {
+  position: fixed;
+  left: 4rem;
+  top: 0;
+  padding: 1rem 4rem 4rem 4rem;
+  height: 100vh;
+  width: 100%;
+  max-width: 40rem;
+  overflow-y: scroll;
+  z-index: 10;
+}
+.invoice-form-wrapper .light {
+  background: var(--default-background);
+}
+.invoice-form-wrapper .dark {
+  background: var(--dark-background-900);
+}
+
+.form-wrapper.light input {
+  background: inherit;
+}
+.form-wrapper.dark input {
+  background: var(--dark-700);
+  border-color: var(--dark-700);
+}
+.invoice-form-wrapper h1 {
+  font-family: "spartan-700";
+}
+.invoice-form-wrapper h6 {
+  font-size: 1rem;
+  font-family: "spartan-400";
+  color: var(--btn-primary);
+}
+.input-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.close-route-modal-btn {
+  cursor: pointer;
+  width: 1rem;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+}
+.form-control #total {
+  margin-bottom: 3rem;
+}
+.submit-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .invoice-form-wrapper {
+    padding: 5rem 1.5rem 5rem 1.5rem;
+    left: 0;
+  }
+  .input-row {
+    display: block;
+  }
+}
